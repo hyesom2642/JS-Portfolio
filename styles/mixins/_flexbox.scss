@@ -1,0 +1,55 @@
+// display: flex;
+// justify-content: flex-start, center, flex-end, space-between, space-aroud, stretch;
+// align-items: flex-start, center, flex-end, space-between, space-aroud, stretch;
+
+// Map = key:value으로 구성
+
+$flex-map: (
+  start: flex-start,
+  end: flex-end,
+  between: space-between,
+  around: space-around,
+  stretch: stretch,
+  center: centerm,
+);
+
+@function _get-flex-value($key) {
+  @return map-get($flex-map, $key);
+  // @if ($key == start) {
+  //   @return flex-start;
+  // }
+  // @if ($key == end) {
+  //   @return flex-end;
+  // }
+  // @if ($key == between) {
+  //   @return space-between;
+  // }
+  // @if ($key == around) {
+  //   @return space-around;
+  // }
+  // @if ($key == stretch) {
+  //   @return stretch;
+  // }
+  // @if ($key == center) {
+  //   @return center;
+  // }
+}
+
+@mixin flexbox($jc: center, $ai: center) {
+  display: flex;
+  justify-content: _get-flex-value($jc);
+  align-items: _get-flex-value($ai);
+}
+
+@mixin inline-flexbox($jc: center, $ai: center) {
+  display: inline-flex;
+  justify-content: _get-flex-value($jc);
+  align-items: _get-flex-value($ai);
+}
+
+@mixin column-flexbox($jc: center, $ai: center) {
+  display: flex;
+  flex-direction: column;
+  justify-content: _get-flex-value($jc);
+  align-items: _get-flex-value($ai);
+}
