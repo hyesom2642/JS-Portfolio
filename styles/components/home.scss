@@ -1,0 +1,18 @@
+#home {
+  .home-title {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    overflow-x: hidden;
+    @include column-flexbox();
+    @include text-style(16, $white);
+
+    @include responsive(tablet) {
+      @include text-style(30);
+    }
+
+    @include responsive(desktop) {
+      @include text-style(50);
+    }
+  }
+}
