@@ -10,7 +10,7 @@ $flex-map: (
   between: space-between,
   around: space-around,
   stretch: stretch,
-  center: centerm,
+  center: center,
 );
 
 @function _get-flex-value($key) {
