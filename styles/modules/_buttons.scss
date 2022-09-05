@@ -1,5 +1,6 @@
 %button-base {
   @include inline-flexbox;
+  width: 150px;
   padding: 0 10px;
   border-radius: 20px;
 }
