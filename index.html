@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<lang="ko">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,14 +13,106 @@
       rel="stylesheet"
     />
     <!-- ===== web font : Black Han Sans ===== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ===== carousel : tiny slider ===== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
 
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <section id="home">
+    <!-- global navigation bar(gnb) start -->
+    <header class="gnb">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <button
+              class="gnb-menu-icon sm-only is-menu"
+              type="button"
+              aria-label="메뉴 버튼 열기"
+            >
+              <i class="ic-menu"></i>
+            </button>
+            <nav class="gnb-nav sm-hidden">
+              <h1 class="visually-hidden">메뉴</h1>
+              <ul class="gnb-list">
+                <div class="gnb-list-left">
+                  <li class="gnb-left-item">
+                    <a href="#about"> github </a>
+                  </li>
+                  <li class="gnb-left-item">
+                    <a href="#about"> document </a>
+                  </li>
+                  <li class="gnb-left-item">
+                    <a href="#about"> email </a>
+                  </li>
+                </div>
+                <div class="gnb-list-right">
+                  <li class="gnb-right-item">
+                    <a href="#home">home</a>
+                  </li>
+                  <li class="gnb-right-item">
+                    <a href="#about">about</a>
+                  </li>
+                  <li class="gnb-right-item">
+                    <a href="#project">project</a>
+                  </li>
+                  <li class="gnb-right-item">
+                    <a href="#contact">contact</a>
+                  </li>
+                </div>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- global navigation bar(gnb) end -->
+
+    <!-- sidebar start -->
+    <aside class="sidebar sm-only">
+      <header class="sidebar-header">
+        <button class="sidebar-close-button"></button>
+      </header>
+      <nav class="sidebar-nav">
+        <h1 class="visually-hidden">사이드바 메뉴</h1>
+        <ul class="sidebar-nav-list">
+          <li class="sidebar-nav-item">
+            <a href="#about"> github </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#about"> document </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#about"> email </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#home">home</a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#about">about</a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#project">project</a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#contact">contact</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <!-- sidebar end -->
+
+    <!-- main home start -->
+    <section class="home">
       <div class="container">
         <div class="row">
           <div class="col-sm-4 col-md-12">
@@ -32,7 +124,148 @@
         </div>
       </div>
     </section>
+    <!-- main home end -->
 
+    <!-- about start -->
+    <section class="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="about-wrapper">
+              <div class="carousel">
+                <ul class="carousel-wrapper">
+                  <li>html & css</li>
+                  <li>javascript</li>
+                  <li>react</li>
+                  <li>typescript</li>
+                </ul>
+              </div>
+              <div class="about-content">
+                <div class="img-wrapper">
+                  <img src="./assets/images/profile.png" alt="김현주 프로필" />
+                </div>
+                <div class="button-wrapper">
+                  <button
+                    class="button-point button-50"
+                    aria-label="email 보내기 버튼"
+                  >
+                    <a href="mailto:kimhyesom@naver.com"> e-mail </a>
+                  </button>
+                  <button
+                    class="button-point button-50"
+                    aria-label="blog 바로가기 버튼"
+                  >
+                    <a href="https://velog.io/@hyesom"> blog </a>
+                  </button>
+                  <button
+                    class="button-point button-50"
+                    aria-label="github 바로가기 버튼"
+                  >
+                    <a href="https://github.com/hyesom2642"> github </a>
+                  </button>
+                </div>
+              </div>
+              <div class="text-wrapper">
+                <h1>주니어 개발자 김현주 입니다!</h1>
+                <p>
+                  배움에는 끝이 없습니다.<br />
+                  항상 배우는 자세로 겸손하게 변화에 맞춰 발전하는 프론트엔드
+                  개발자가 되겠습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about end -->
+
+    <!-- project start -->
+    <section class="project">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="project-wrapper">
+              <h1 class="project-title">project</h1>
+              <ul class="project-list">
+                <li class="project-item">
+                  <h3 class="project-title visually-hidden">Project1</h3>
+                  <ul class="project-skills visually-hidden">
+                    <li>스킬1</li>
+                    <li>스킬2</li>
+                    <li>스킬3</li>
+                  </ul>
+                  <p class="project-desc visually-hidden">proejct설명</p>
+                  <img src="./assets/images/profile.png" alt="예시" />
+                </li>
+                <li class="project-item">
+                  <h1 class="project-title visually-hidden">Project2</h1>
+                  <ul class="project-skill visually-hidden">
+                    <li>스킬4</li>
+                    <li>스킬5</li>
+                  </ul>
+                  <p class="project-desc visually-hidden">proejct설명</p>
+                  <img
+                    src="data:image/png;base64,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"
+                    alt="예시2"
+                  />
+                </li>
+                <li class="project-item">
+                  <h1 class="project-title visually-hidden">Project3</h1>
+                  <ul class="project-skill visually-hidden">
+                    <li>스킬6</li>
+                    <li>스킬7</li>
+                    <li>스킬8</li>
+                  </ul>
+                  <p class="project-desc visually-hidden">proejct설명</p>
+                  <img
+                    src="https://pbs.twimg.com/media/ErBklB9U0AIowAZ.png"
+                    alt="예시3"
+                  />
+                </li>
+                <li class="project-item">
+                  <h1 class="project-title visually-hidden">Project4</h1>
+                  <ul class="project-skill visually-hidden">
+                    <li>스킬9</li>
+                    <li>스킬10</li>
+                  </ul>
+                  <p class="project-desc visually-hidden">proejct설명</p>
+                  <img
+                    src="https://mblogthumb-phinf.pstatic.net/MjAyMDA4MDZfNTIg/MDAxNTk2Njk3MTk0NDI5.oX908zk4lURA-Qn9grLRE-TmYhMTg9tB2aZ7pEXsEEog.JAGhE2fNp5VU65JSvBnBwI5ynTOvJzNu5OFnX-9LhEkg.PNG.designpress2016/6.png?type=w800"
+                    alt="예시4"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- project end -->
+    <aside class="popup">
+      <button type="button" class="popup-close-button">X</button>
+      <img class="popup-image" src="" alt="" />
+      <h1 class="popup-title"></h1>
+      <ul class="popup-skills">
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <p class="popup-desc"></p>
+      <div class="popup-button-wrapper">
+        <button type="button" class="button-point button-50">DEMO</button>
+        <button type="button" class="button-point button-50">CODE</button>
+      </div>
+    </aside>
+
+    <!-- overlay start -->
+    <div class="overlay"></div>
+    <!-- overlay end -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="./js/home-title.js"></script>
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/carousel.js"></script>
+    <script src="./js/project.js"></script>
   </body>
 </html>
