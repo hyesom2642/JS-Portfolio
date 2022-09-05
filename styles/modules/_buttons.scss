@@ -1,0 +1,27 @@
+%button-base {
+  @include inline-flexbox;
+  padding: 0 10px;
+  border-radius: 20px;
+}
+
+// mobile-button-size
+.button-point {
+  @extend %button-base;
+  background-color: $point;
+  color: $white;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+
+  &:hover {
+    opacity: 0.7;
+    background-color: $sub-point;
+    border: 5px double $white;
+    font-style: italic;
+  }
+}
+
+.button-50 {
+  @include text-style(20, $white);
+  font-weight: bold;
+  height: 50px;
+}
