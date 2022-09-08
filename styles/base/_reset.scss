@@ -9,6 +9,7 @@
 html {
   font-family: $font-main;
   font-size: $font-size-16;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -16,7 +17,7 @@ body {
   height: 100%;
   font-family: $font-main;
   color: $primary;
-  background-color: #000;
+  background-color: $black;
 }
 
 /* ===== <h1> ~ <h6> ===== */
